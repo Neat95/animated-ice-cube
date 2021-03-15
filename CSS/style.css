@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+body{
+    background: cadetblue;
+
+}
+
+.wrapper{
+    width: 200px;
+    height: 200px;
+    margin: 15% auto;
+
+}
+
+.box-area{
+    animation: animate 10s ease-in-out infinite;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+
+}
+
+.box-area div{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+
+}
+
+.box-area .box1{
+   
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    transform: translateZ(100px);
+}
+
+.box-area .box2{
+   
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.box-area .box3{
+   
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+}
+
+.box-area .box4{
+   
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+}
+
+.box-area .box5{
+   
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+}
+
+.box-area .box6{
+   
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes animate{
+    from,to{
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+
+    }
+    16%{
+        transform: rotateY(-90deg);
+    }
+    33%{
+        transform: rotateY(-90deg) rotateZ(90deg); 
+    }
+    50%{
+        transform: rotateY(-180deg) rotateZ(90deg); 
+    }
+66%{
+        transform: rotateY(-270deg) rotateX(90deg); 
+    }
+
+    83%{
+        transform: rotateX(90deg) ; 
+    }
+
+
+
+}
+
+
+/*body{
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+.swiper-container {
+      width: 300px;
+      height: 380px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -150px;
+      margin-top: -150px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      background: #f2f2f2;
+    }
+
+    .swiper-container .swiper-slide .imgBx
+    {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+
+    }
+
+.swiper-container .swiper-slide .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-container .swiper-slide .content
+{
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-container .swiper-slide .content h2
+{
+    font-size: 20px;
+
+}
+
+.swiper-container .swiper-slide .content h2 span
+{
+    font-size: 16px;
+    color: #f44336;
+}
+
+
